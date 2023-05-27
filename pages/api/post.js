@@ -6,7 +6,7 @@ export default function handler(req, res) {
     const slug = req.query.slug;
     fs.readFile(`blog_data/${slug}.json`, 'utf-8', (err, data) => {
         if (err) {
-            return res.status(404).json({ error: err.errno })
+            return res.status(404).json({ error: err.errno, message: "No such blog exists!" })
         }
         res.status(200).json(JSON.parse(data));
     })
