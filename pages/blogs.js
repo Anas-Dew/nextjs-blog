@@ -3,14 +3,17 @@ import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import axios from 'axios'
 const inter = Inter({ subsets: ['latin'] })
-const Blogs = () => {
-    const [Blogs, setBlogs] = useState([])
-    useEffect(() => {
-        axios.get('/api/blogs').then((res) => {
-            console.log(res.data);
-            setBlogs(res.data)
-        })
-    }, [])
+const Blogs = (props) => {
+    console.log(props);
+    const [Blogs, setBlogs] = useState(props.data)
+
+    // THIS IS GOOD BUT IS NOT GOOD FOR SEO AS IT USES JS TO POPULATE SITE. NOT RAW HTML
+    // useEffect(() => {
+    //     axios.get('/api/blogs').then((res) => {
+    //         console.log(res.data);
+    //         setBlogs(res.data)
+    //     })
+    // }, [])
 
     return (
         <main
@@ -38,6 +41,18 @@ const Blogs = () => {
             </div>
         </main>
     )
+}
+
+// This gets called on every request
+export async function getServerSideProps(context) {
+    // Fetch data from external API
+    // console.log(context);
+    let blogs = await axios.get('http://localhost:3000/api/blogs')
+
+    let data = await blogs.data
+    // console.log(data);
+    // Pass data to the page via props
+    return { props: { data } };
 }
 
 export default Blogs
