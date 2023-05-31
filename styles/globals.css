@@ -17,11 +17,40 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  color: rgb(var(--foreground-rgb)) !important;
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+ol {
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+pre {
+  /* background-color: #f4f4f4; */
+  border: 1px solid #ddd;
+  color: aliceblue;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+section {
+  /* background-color: #fff; */
+  color: aliceblue !important;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

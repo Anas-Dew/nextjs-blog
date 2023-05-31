@@ -5,6 +5,7 @@ import axios from 'axios'
 const Post = (props) => {
     // const router = useRouter()
     const [Content, setContent] = useState(props.content)
+    // THIS IS GOOD BUT IS NOT GOOD FOR SEO AS IT USES JS TO POPULATE SITE. NOT RAW HTML
     // useEffect(() => {
     //     if (!router.isReady) { return }
     //     const { slug } = router.query
@@ -18,12 +19,13 @@ const Post = (props) => {
         <section className={PostCss.blog_section_div}>
             <h1 className={PostCss.blog_title}>{Content.title}</h1>
             {/* <section dangerouslySetInnerHTML={Content.content}></section> */}
-            <section>{Content.content}</section>
+            <section dangerouslySetInnerHTML={{__html : Content.content}}></section>
             <p className='mt-5'>By {Content.author}, published on {Content.date}</p>
         </section>
     )
 }
 
+// THIS CREATES HTML ON DEMAND. ON EACH REQUEST.
 // This gets called on every request
 export async function getServerSideProps(context) {
     // Fetch data from external API
@@ -35,5 +37,7 @@ export async function getServerSideProps(context) {
     // Pass data to the page via props
     return { props: { content } };
 }
+
+// 
 
 export default Post

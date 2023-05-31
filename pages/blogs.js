@@ -34,7 +34,7 @@ const Blogs = (props) => {
                             </span>
                         </h2>
                         <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                            {blogItem.content.slice(0, 60)}...
+                            {blogItem.meta_description.slice(0,60)}...
                         </p>
                     </Link>
                 })}
