@@ -1,0 +1,11 @@
+.aboutDiv {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.aboutDiv > p {
+    
+}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import axios from 'axios'
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 const Blogs = (props) => {
     console.log(props);
     const [Blogs, setBlogs] = useState(props.data)
@@ -17,7 +17,7 @@ const Blogs = (props) => {
 
     return (
         <main
-            className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+            className={`flex min-h-screen flex-col items-center justify-between p-24 `}
         >
             <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
                 {Blogs.map((blogItem) => {

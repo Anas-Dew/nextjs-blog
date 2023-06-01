@@ -1,0 +1,16 @@
+.contactForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+}
+.contactForm > * {
+    margin: 0.5rem;
+    
+}
+.contactForm > input,.contactForm > textarea {
+    padding: 1rem;
+    caret-color: black;
+    color: black;
+}
