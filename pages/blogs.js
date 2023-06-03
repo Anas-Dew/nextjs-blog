@@ -15,6 +15,12 @@ const Blogs = (props) => {
     //     })
     // }, [])
 
+    useEffect(() => {
+        if (process.env.NODE_ENV === 'production') {
+            alert("API is not available in production mode! Try cloning in your system to look through the blog.")
+        }
+    }, [])
+
     return (
         <main
             className={`flex min-h-screen flex-col items-center justify-between p-24 `}
@@ -47,7 +53,7 @@ const Blogs = (props) => {
 export async function getServerSideProps(context) {
     // Fetch data from external API
     // console.log(context);
-    let blogs = await axios.get('https://nextjs-blog-template-anasdew.vercel.app/api/getblogs')
+    let blogs = await axios.get('http://localhost:3000/api/getblogs')
 
     let data = await blogs.data
     // console.log(data);
