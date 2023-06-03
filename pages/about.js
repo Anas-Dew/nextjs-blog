@@ -6,7 +6,7 @@ const About = () => {
             <h1>Welcome to Our Tech Blog</h1>
             <p>
                 Where we explore the fascinating world of technology in a simple and accessible way.
-                Whether you're a tech enthusiast, a beginner looking to learn more, or just curious about the latest tech trends, we've got you covered.
+                Whether youre a tech enthusiast, a beginner looking to learn more, or just curious about the latest tech trends, weve got you covered.
             </p>
 
             <p>
@@ -15,7 +15,7 @@ const About = () => {
             </p>
 
             <p>
-                In this blog, you'll find a wide range of articles, tutorials, and guides that cover various topics related to technology.
+                In this blog, youll find a wide range of articles, tutorials, and guides that cover various topics related to technology.
                 From the latest smartphones and gadgets to software tips and tricks, we strive to provide informative and engaging content that is easy to understand.
             </p>
 
@@ -31,7 +31,7 @@ const About = () => {
             </p>
 
             <p>
-                So whether you're looking for buying guides, troubleshooting tips, or simply want to stay informed about the latest tech news, you've come to the right place.
+                So whether youre looking for buying guides, troubleshooting tips, or simply want to stay informed about the latest tech news, youve come to the right place.
                 Join us on this exciting journey as we explore the ever-evolving world of technology together.
                 Happy reading!
             </p>
