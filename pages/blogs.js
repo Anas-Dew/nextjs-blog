@@ -47,7 +47,7 @@ const Blogs = (props) => {
 export async function getServerSideProps(context) {
     // Fetch data from external API
     // console.log(context);
-    let blogs = await axios.get('http://localhost:3000/api/blogs')
+    let blogs = await axios.get('https://nextjs-blog-template-anasdew.vercel.app/api/getblogs')
 
     let data = await blogs.data
     // console.log(data);
