@@ -4,28 +4,19 @@ import Link from 'next/link'
 import axios from 'axios'
 // const inter = Inter({ subsets: ['latin'] })
 const Blogs = (props) => {
-    console.log(props);
+    // console.log(props);
     const [Blogs, setBlogs] = useState(props.data)
 
-    // THIS IS GOOD BUT IS NOT GOOD FOR SEO AS IT USES JS TO POPULATE SITE. NOT RAW HTML
     // useEffect(() => {
-    //     axios.get('/api/blogs').then((res) => {
-    //         console.log(res.data);
-    //         setBlogs(res.data)
-    //     })
+        
     // }, [])
-
-    useEffect(() => {
-        if (process.env.NODE_ENV === 'production') {
-            alert("API is not available in production mode! Try cloning in your system to look through the blog.")
-        }
-    }, [])
 
     return (
         <main
             className={`flex min-h-screen flex-col items-center justify-between p-24 `}
         >
-            <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+            <h1>Today's picks</h1>
+            <div className="mb-32 grid  lg:mb-0 lg:grid-cols-4 lg:text-left">
                 {Blogs.map((blogItem) => {
                     return <Link key={blogItem.slug}
                         href={`/post/${blogItem.slug}`}
@@ -43,7 +34,7 @@ const Blogs = (props) => {
                             {blogItem.meta_description.slice(0,60)}...
                         </p>
                     </Link>
-                })}
+                })} 
             </div>
         </main>
     )

@@ -52,6 +52,26 @@ pre {
 section {
   /* background-color: #fff; */
   color: aliceblue !important;
-  padding: 20px;
+  /* padding: 20px; */
+  padding-left: 6rem;
+  padding-right: 6rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+section>* {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+section> ul > li {
+  list-style: circle;
+  margin-left: 2rem;
+  width: 50vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

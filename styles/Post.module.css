@@ -1,10 +1,33 @@
-.blog_section_div {
-    padding: 2rem;
-}
+.blog_section_div {}
 
 
 /* /// BLOG HEADING */
 .blog_title {
     font-size: xx-large;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* /// UTILS */
+.share_button {}
+
+.share_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.share_elements a{
+    border: 1px solid #4b4b4b !important;
+    background: none !important;
+}
+.share_elements a:hover{
+    border: 1px solid white !important;
+    background: none !important;
+}
+
+@media screen and (max-width: 480px) {
+    .share_elements {
+        display: none;
+    }
 }
